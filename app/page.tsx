@@ -14,18 +14,18 @@ export default function Home() {
   const amount = 49.99;
   return (
     <main className='max-w-6xl mx-auto p-10 text-white text-center border m-10 rounded-md bg-gradient-to-tr from-blue-500 to-purple-500'>
-      <div className="mb-10">
-        <h1 className="text-4xl font-extrabold mb-2">Jimmy</h1>
-        <h1 className="text-2xl">has requested</h1>
-        <span className="font-bold">£{amount}</span>
+      <div className='mb-10'>
+        <h1 className='text-4xl font-extrabold mb-2'>Jimmy</h1>
+        <h1 className='text-2xl'>has requested</h1>
+        <span className='font-bold'>£{amount}</span>
       </div>
 
-      <Elements 
+      <Elements
         stripe={stripePromise}
         options={{
-          mode: 'payment',
+          mode: "payment",
           amount: convertToSubcurrency(amount), //cents
-          currency: "usd"
+          currency: "gbp",
         }}
       >
         <CheckoutPage amount={amount} />
